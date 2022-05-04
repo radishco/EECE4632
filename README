@@ -1,7 +1,2 @@
-The bitstream folder contains the .bit, .hwh and the .tcl files needed to run the FFT on hardware. The next steps is to take these files
-and to generate a python script to try to produce an FFT on the FPGA. 
-
-Currently, the CodeUpdate jupyter notebook file has the software implementation that should generate a dictionary of song fingerprints 
-based on their FFTs. To run the code, go through the first four blocks on the the jupyter notebook and the code should already produce the dictionary.
-Only 2 songs are in the GitHub repo, but next steps will be to fully create a dictionary of 5 songs with their FFT based fingerprints and to write a short script 
-that takes this dictionary and a sample song to try to match the inputted song with a song on the dictionary.
+The bitstream folder contains the .bit, .hwh and the .tcl files needed to run the FFT and the comparison on the hardware. The directory path on the jupyter notebook would have to be edited so that the hardware would be able to find all of the bitstream files to run.
+There are two .wav files in the folder. Changing the name of the inputted .wav file on the software code would allow for the software scripts to run. Each hardware block can run seperately, but at this point, I did not test the hardware being able to take in the .wav file and converting it into the 1024 buffer needed for the FFT overlay to generate an FFT spectrum.
